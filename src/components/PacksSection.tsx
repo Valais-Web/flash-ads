@@ -26,7 +26,11 @@ const packs = [
   },
 ];
 
-const PacksSection = () => {
+interface PacksSectionProps {
+  onCTA: () => void;
+}
+
+const PacksSection = ({ onCTA }: PacksSectionProps) => {
   return (
     <section id="packs" className="section-spacing">
       <div className="container mx-auto px-6">
@@ -73,8 +77,8 @@ const PacksSection = () => {
               </ul>
               <div className="gradient-separator mb-6" />
               <p className="text-xs text-muted italic">{pack.example}</p>
-              <Button variant={pack.featured ? "hero" : "outline"} className="w-full mt-6">
-                Recevoir une proposition
+              <Button variant={pack.featured ? "hero" : "outline"} className="w-full mt-6" onClick={onCTA}>
+                Demander un devis
               </Button>
             </motion.div>
           ))}
