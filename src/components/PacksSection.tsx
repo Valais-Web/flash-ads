@@ -77,8 +77,8 @@ const PacksSection = ({ onCTA }: PacksSectionProps) => {
               </ul>
               <div className="gradient-separator mb-6" />
               <p className="text-xs text-muted italic">{pack.example}</p>
-              <Button variant={pack.featured ? "hero" : "outline"} className="w-full mt-6">
-                Recevoir une proposition
+              <Button variant={pack.featured ? "hero" : "outline"} className="w-full mt-6" onClick={onCTA}>
+                Demander un devis
               </Button>
             </motion.div>
           ))}

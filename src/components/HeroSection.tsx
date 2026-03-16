@@ -10,7 +10,11 @@ const bullets = [
   "Suivi précis des appels, formulaires et réservations",
 ];
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onCTA: () => void;
+}
+
+const HeroSection = ({ onCTA }: HeroSectionProps) => {
   return (
     <section className="relative min-h-screen flex items-center hero-glow pt-16">
       <div className="container mx-auto px-6 py-20">
@@ -38,10 +42,9 @@ const HeroSection = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="xl">Recevoir une proposition</Button>
-              <Button variant="hero-outline" size="xl">Demander un audit gratuit</Button>
-            </div>
+            <Button variant="hero" size="xl" onClick={onCTA}>
+              Demander un devis
+            </Button>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

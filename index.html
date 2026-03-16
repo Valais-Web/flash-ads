@@ -22,6 +22,17 @@
   </head>
 
   <body>
+    <!-- Netlify static form detection -->
+    <form name="demande-devis" netlify netlify-honeypot="bot-field" hidden>
+      <input name="form-name" type="hidden" value="demande-devis" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="email" />
+      <input name="phone" />
+      <input name="company" />
+      <textarea name="message"></textarea>
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

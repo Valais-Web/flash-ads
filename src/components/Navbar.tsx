@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import logo from "@/assets/flash-ads-logo.png";
 
-const Navbar = () => {
+interface NavbarProps {
+  onCTA: () => void;
+}
+
+const Navbar = ({ onCTA }: NavbarProps) => {
   return (
     <motion.nav
       initial={{ opacity: 0, y: -10 }}
@@ -17,9 +21,12 @@ const Navbar = () => {
           <a href="#packs" className="hover:text-foreground transition-colors">Nos offres</a>
           <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
         </div>
-        <a href="#contact" className="bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-medium hover:shadow-[0_0_20px_rgba(124,92,255,0.4)] transition-all duration-300">
-          Recevoir une proposition
-        </a>
+        <button
+          onClick={onCTA}
+          className="bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-medium hover:shadow-[0_0_20px_rgba(124,92,255,0.4)] transition-all duration-300"
+        >
+          Demander un devis
+        </button>
       </div>
     </motion.nav>
   );

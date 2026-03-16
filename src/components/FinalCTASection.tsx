@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
-const FinalCTASection = () => {
+interface FinalCTASectionProps {
+  onCTA: () => void;
+}
+
+const FinalCTASection = ({ onCTA }: FinalCTASectionProps) => {
   return (
     <section id="contact" className="section-spacing relative">
       <div className="absolute inset-0 hero-glow pointer-events-none" />
@@ -19,10 +23,9 @@ const FinalCTASection = () => {
           <p className="text-lg text-muted-foreground leading-relaxed mb-10">
             Discutons de votre projet et voyons comment Google Ads peut développer votre activité.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="hero" size="xl">Recevoir une proposition</Button>
-            <Button variant="hero-outline" size="xl">Planifier un appel</Button>
-          </div>
+          <Button variant="hero" size="xl" onClick={onCTA}>
+            Demander un devis
+          </Button>
         </motion.div>
       </div>
     </section>
