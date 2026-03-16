@@ -43,9 +43,9 @@ const TrustSection = () => {
             className="flex justify-center"
           >
             <div className="rounded-2xl bg-card border border-border/50 p-12 backdrop-blur-sm glow-card flex flex-col items-center gap-6">
-              <div className="w-24 h-24 rounded-2xl bg-primary/10 flex items-center justify-center">
-                <Award className="w-12 h-12 text-primary" strokeWidth={1.5} />
-              </div>
+              <a href="https://www.google.com/partners/agency?id=9907170973" target="_blank" rel="noopener noreferrer">
+                <img src="https://www.gstatic.com/partners/badge/images/2026/PartnerBadgeClickable.svg" alt="Google Partner" className="h-28" />
+              </a>
               <div className="text-center">
                 <p className="text-2xl font-semibold mb-2">Google Partner</p>
                 <p className="text-muted-foreground text-sm">Agence certifiée</p>

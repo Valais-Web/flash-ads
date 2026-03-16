@@ -41,9 +41,9 @@ const GooglePartnerSection = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="flex justify-center"
           >
-            <div className="w-48 h-48 rounded-3xl bg-card border border-border/50 glow-card flex items-center justify-center">
-              <Award className="w-24 h-24 text-primary" strokeWidth={1} />
-            </div>
+            <a href="https://www.google.com/partners/agency?id=9907170973" target="_blank" rel="noopener noreferrer" className="rounded-3xl bg-card border border-border/50 glow-card p-12 flex items-center justify-center">
+              <img src="https://www.gstatic.com/partners/badge/images/2026/PartnerBadgeClickable.svg" alt="Google Partner" className="h-36" />
+            </a>
           </motion.div>
         </div>
       </div>
