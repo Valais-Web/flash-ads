@@ -26,7 +26,11 @@ const packs = [
   },
 ];
 
-const PacksSection = () => {
+interface PacksSectionProps {
+  onCTA: () => void;
+}
+
+const PacksSection = ({ onCTA }: PacksSectionProps) => {
   return (
     <section id="packs" className="section-spacing">
       <div className="container mx-auto px-6">
