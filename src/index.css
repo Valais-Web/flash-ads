@@ -87,4 +87,15 @@
     background: linear-gradient(90deg, transparent, rgba(163, 168, 184, 0.1), transparent);
     height: 1px;
   }
+  .prose-custom h2 {
+    @apply text-xl font-semibold text-foreground mt-8 mb-3;
+  }
+
+  .prose-custom ul {
+    @apply list-disc pl-5 space-y-1 my-3;
+  }
+
+  .prose-custom p {
+    @apply mb-3;
+  }
 }
